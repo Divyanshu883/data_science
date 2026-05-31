@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STRANGER EVENT – First Time in Haldwani | Premium DJ Night Event</title>
+    <meta name="description" content="STRANGER EVENT - First Time in Haldwani! Meet Strangers, Make Friends, Dance & Enjoy DJ Night. Book your VIP tickets now for the most exclusive event in Uttarakhand.">
+    <meta property="og:title" content="STRANGER EVENT – First Time in Haldwani">
+    <meta property="og:description" content="Meet Strangers • Make Friends • Dance • Enjoy DJ Night. The most exclusive event in Haldwani, Uttarakhand.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#7c3aed">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'neon-purple': { 400: '#c084fc', 500: '#a855f7', 600: '#9333ea', 700: '#7c3aed' },
+                        'neon-pink': { 400: '#f472b6', 500: '#ec4899', 600: '#db2777' },
+                        'dark': { 900: '#0a0a0a', 800: '#111111', 700: '#1a1a1a' }
+                    },
+                    fontFamily: {
+                        'orbitron': ['Orbitron', 'sans-serif'],
+                        'inter': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #0a0a0a; color: #fff; overflow-x: hidden; }
+
+        /* Glassmorphism */
+        .glass { background: rgba(255,255,255,0.05); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; }
+        .glass-strong { background: rgba(255,255,255,0.08); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px); border: 1px solid rgba(255,255,255,0.15); border-radius: 20px; }
+
+        /* Neon Text Glow */
+        .neon-text-purple { text-shadow: 0 0 7px #a855f7, 0 0 10px #a855f7, 0 0 21px #a855f7, 0 0 42px #7c3aed; }
+        .neon-text-pink { text-shadow: 0 0 7px #ec4899, 0 0 10px #ec4899, 0 0 21px #ec4899, 0 0 42px #db2777; }
+        .neon-text-green { text-shadow: 0 0 7px #22c55e, 0 0 10px #22c55e, 0 0 21px #22c55e; }
+
+        /* Neon Border Glow */
+        .neon-border { box-shadow: 0 0 5px rgba(168,85,247,0.3), 0 0 15px rgba(168,85,247,0.15), inset 0 0 5px rgba(168,85,247,0.1); border: 1px solid rgba(168,85,247,0.4); }
+        .neon-border-pink { box-shadow: 0 0 5px rgba(236,72,153,0.3), 0 0 15px rgba(236,72,153,0.15), inset 0 0 5px rgba(236,72,153,0.1); border: 1px solid rgba(236,72,153,0.4); }
+        .neon-border-green { box-shadow: 0 0 5px rgba(34,197,94,0.3), 0 0 15px rgba(34,197,94,0.15); border: 1px solid rgba(34,197,94,0.4); }
+
+        /* Particles */
+        .particle {
+            position: absolute; border-radius: 50%; pointer-events: none;
+            animation: float linear infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0) translateX(0) scale(1); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100vh) translateX(50px) scale(0.5); opacity: 0; }
+        }
+
+        /* Pulse Glow */
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 5px rgba(168,85,247,0.3), 0 0 15px rgba(168,85,247,0.15); }
+            50% { box-shadow: 0 0 15px rgba(168,85,247,0.6), 0 0 30px rgba(168,85,247,0.3), 0 0 45px rgba(168,85,247,0.15); }
+        }
+        .pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+
+        /* Shine / Holographic */
+        @keyframes shine {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+        .holographic-shine {
+            position: relative; overflow: hidden;
+        }
+        .holographic-shine::after {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(105deg, transparent 40%, rgba(168,85,247,0.15) 45%, rgba(236,72,153,0.15) 50%, rgba(192,132,252,0.15) 55%, transparent 60%);
+            background-size: 200% 100%;
+            animation: shine 3s ease-in-out infinite;
+            pointer-events: none; border-radius: inherit;
+        }
+
+        /* Confetti */
+        @keyframes confetti-fall {
+            0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+        }
+        .confetti-piece {
+            position: absolute; width: 10px; height: 10px;
+            animation: confetti-fall linear forwards;
+        }
+
+        /* Gradient shift */
+        @keyframes gradient-shift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Ticker / Banner glow */
+        @keyframes ticker-glow {
+            0%, 100% { text-shadow: 0 0 10px #ec4899, 0 0 20px #ec4899; opacity: 0.8; }
+            50% { text-shadow: 0 0 20px #ec4899, 0 0 40px #ec4899, 0 0 60px #a855f7; opacity: 1; }
+        }
+
+        /* Bounce */
+        @keyframes bounce-subtle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        /* WhatsApp float */
+        @keyframes wa-bounce {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-6px) scale(1.05); }
+        }
+
+        /* Fade in up for scroll */
+        .fade-in-up {
+            opacity: 0; transform: translateY(30px);
+            transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+        }
+        .fade-in-up.visible {
+            opacity: 1; transform: translateY(0);
+        }
+
+        /* Hero border animation */
+        @keyframes border-rotate {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Input styling */
+        .form-input {
+            background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 12px; padding: 14px 18px; color: #fff; width: 100%;
+            font-family: 'Inter', sans-serif; font-size: 15px;
+            transition: all 0.3s ease; outline: none;
+        }
+        .form-input:focus {
+            border-color: #a855f7;
+            box-shadow: 0 0 0 3px rgba(168,85,247,0.2), 0 0 15px rgba(168,85,247,0.15);
+        }
+        .form-input::placeholder { color: rgba(255,255,255,0.35); }
+        select.form-input { appearance: none; cursor: pointer;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23a855f7' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat; background-position: right 16px center;
+        }
+        select.form-input option { background: #1a1a1a; color: #fff; }
+
+        /* File input */
+        .file-input-wrapper {
+            position: relative; border: 2px dashed rgba(168,85,247,0.3); border-radius: 12px;
+            padding: 24px; text-align: center; cursor: pointer; transition: all 0.3s ease;
+        }
+        .file-input-wrapper:hover { border-color: rgba(168,85,247,0.6); background: rgba(168,85,247,0.05); }
+        .file-input-wrapper input[type="file"] {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer;
+        }
+
+        /* Ticket VIP */
+        .vip-ticket {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 50%, #0a0a0a 100%);
+            border: 2px solid #a855f7; border-radius: 20px; position: relative; overflow: hidden;
+            box-shadow: 0 0 20px rgba(168,85,247,0.3), 0 0 40px rgba(168,85,247,0.1), inset 0 0 20px rgba(168,85,247,0.05);
+        }
+        .vip-ticket::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            border: 1px solid rgba(236,72,153,0.3); border-radius: 18px; margin: 4px; pointer-events: none;
+        }
+
+        /* Toast */
+        .toast {
+            position: fixed; bottom: 100px; left: 50%; transform: translateX(-50%);
+            background: rgba(34,197,94,0.9); color: #fff; padding: 12px 24px;
+            border-radius: 12px; font-weight: 600; z-index: 10000;
+            animation: toast-in 0.3s ease, toast-out 0.3s ease 2s forwards;
+        }
+        @keyframes toast-in { from { opacity: 0; transform: translateX(-50%) translateY(20px); } to { opacity: 1; transform: translateX(-50%) translateY(0); } }
+        @keyframes toast-out { from { opacity: 1; } to { opacity: 0; transform: translateX(-50%) translateY(-20px); } }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: #7c3aed; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #a855f7; }
+
+        /* QR Code container */
+        #payment-qr canvas, #payment-qr img { border-radius: 8px; }
+        #ticket-qr canvas, #ticket-qr img { border-radius: 8px; }
+    </style>
+
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect, useRef, useCallback } = React;
+
+        /* ─────────────── PARTICLES BACKGROUND ─────────────── */
+        function Particles() {
+            const particles = Array.from({ length: 30 }, (_, i) => ({
+                id: i,
+                left: Math.random() * 100,
+                size: Math.random() * 6 + 2,
+                duration: Math.random() * 8 + 6,
+                delay: Math.random() * 10,
+                color: i % 3 === 0 ? '#a855f7' : i % 3 === 1 ? '#ec4899' : '#c084fc',
+                opacity: Math.random() * 0.5 + 0.2,
+            }));
+
+            return (
+                <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+                    {particles.map(p => (
+                        <div key={p.id} className="particle" style={{
+                            left: `${p.left}%`, bottom: '-10px',
+                            width: `${p.size}px`, height: `${p.size}px`,
+                            background: p.color, opacity: p.opacity,
+                            animationDuration: `${p.duration}s`,
+                            animationDelay: `${p.delay}s`,
+                            boxShadow: `0 0 ${p.size * 2}px ${p.color}`,
+                        }} />
+                    ))}
+                </div>
+            );
+        }
+
+        /* ─────────────── FLOATING WHATSAPP BUTTON ─────────────── */
+        function FloatingWhatsApp() {
+            return (
+                <a href="https://wa.me/917668940413?text=Hello%20Host%2C%20I%20want%20information%20regarding%20STRANGER%20EVENT."
+                   target="_blank" rel="noopener noreferrer"
+                   className="fixed bottom-6 right-6 z-50 flex items-center gap-2 px-5 py-3 rounded-full text-white font-semibold text-sm shadow-lg transition-all duration-300"
+                   style={{
+                       background: 'linear-gradient(135deg, #25D366, #128C7E)',
+                       animation: 'wa-bounce 2s ease-in-out infinite',
+                       boxShadow: '0 0 15px rgba(37,211,102,0.4), 0 0 30px rgba(37,211,102,0.2)',
+                   }}
+                   id="whatsapp-float-btn"
+                >
+                    <span className="text-lg">💬</span> Chat With Host
+                </a>
+            );
+        }
+
+        /* ─────────────── TOAST NOTIFICATION ─────────────── */
+        function Toast({ message, onClose }) {
+            useEffect(() => { const t = setTimeout(onClose, 2500); return () => clearTimeout(t); }, [onClose]);
+            return <div className="toast">{message}</div>;
+        }
+
+        /* ─────────────── HERO SECTION ─────────────── */
+        function HeroSection() {
+            return (
+                <section id="hero" className="relative min-h-screen flex items-center justify-center text-center px-4 overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-b from-purple-900/20 via-transparent to-transparent pointer-events-none" />
+                    <div className="relative z-10 max-w-4xl mx-auto">
+                        <div className="inline-block mb-6 px-5 py-2 rounded-full text-xs font-semibold tracking-widest uppercase glass neon-border" style={{color:'#c084fc'}}>
+                            ✨ Exclusive VIP Event ✨
+                        </div>
+                        <h1 className="font-orbitron text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-4 neon-text-purple tracking-wider">
+                            STRANGER EVENT
+                        </h1>
+                        <h2 className="font-orbitron text-xl sm:text-2xl md:text-3xl font-bold mb-6 neon-text-pink tracking-wide">
+                            FIRST TIME IN HALDWANI
+                        </h2>
+                        <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-10 font-light">
+                            🎉 Meet Strangers • Make Friends • Dance • Enjoy DJ Night
+                        </p>
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                            <a href="#booking" className="px-8 py-4 rounded-full font-bold text-white text-lg transition-all duration-300 hover:scale-105"
+                               style={{background:'linear-gradient(135deg, #7c3aed, #a855f7)', boxShadow:'0 0 20px rgba(168,85,247,0.4)'}}>
+                                🎟 Book Now
+                            </a>
+                            <a href="#contact" className="px-8 py-4 rounded-full font-bold text-white text-lg transition-all duration-300 hover:scale-105 glass neon-border-pink">
+                                📞 Contact Host
+                            </a>
+                        </div>
+                    </div>
+                    <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+                        <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        </svg>
+                    </div>
+                </section>
+            );
+        }
+
+        /* ─────────────── EVENT DETAILS ─────────────── */
+        function EventDetails() {
+            const details = [
+                { icon: '📅', label: 'Date', value: '6 May 2026' },
+                { icon: '⏰', label: 'Doors Open', value: '6:30 PM' },
+                { icon: '📍', label: 'Location', value: 'Haldwani, Uttarakhand' },
+            ];
+            return (
+                <section id="details" className="py-20 px-4 relative z-10">
+                    <div className="max-w-6xl mx-auto">
+                        <h2 className="font-orbitron text-3xl sm:text-4xl font-bold text-center mb-12 neon-text-purple">EVENT DETAILS</h2>
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                            {details.map((d, i) => (
+                                <div key={i} className="fade-in-up glass neon-border p-8 text-center transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(168,85,247,0.3)]" style={{borderRadius:'20px'}}>
+                                    <div className="text-5xl mb-4">{d.icon}</div>
+                                    <div className="text-gray-400 text-sm uppercase tracking-widest mb-2 font-semibold">{d.label}</div>
+                                    <div className="text-xl sm:text-2xl font-bold text-white">{d.value}</div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            );
+        }
+
+        /* ─────────────── COUNTDOWN ─────────────── */
+        function Countdown() {
+            const targetDate = new Date('2026-05-06T13:00:00Z').getTime();
+            const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+            const [isOver, setIsOver] = useState(false);
+
+            useEffect(() => {
+                const tick = () => {
+                    const now = Date.now();
+                    const diff = targetDate - now;
+                    if (diff <= 0) { setIsOver(true); return; }
+                    setTimeLeft({
+                        days: Math.floor(diff / (1000*60*60*24)),
+                        hours: Math.floor((diff / (1000*60*60)) % 24),
+                        minutes: Math.floor((diff / (1000*60)) % 60),
+                        seconds: Math.floor((diff / 1000) % 60),
+                    });
+                };
+                tick();
+                const interval = setInterval(tick, 1000);
+                return () => clearInterval(interval);
+            }, []);
+
+            const boxes = [
+                { label: 'Days', value: timeLeft.days },
+                { label: 'Hours', value: timeLeft.hours },
+                { label: 'Minutes', value: timeLeft.minutes },
+                { label: 'Seconds', value: timeLeft.seconds },
+            ];
+
+            return (
+                <section id="countdown" className="py-20 px-4 relative z-10">
+                    <div className="max-w-4xl mx-auto text-center">
+                        <h2 className="font-orbitron text-3xl sm:text-4xl font-bold mb-12" style={{animation:'ticker-glow 2s ease-in-out infinite'}}>
+                            🔥 EVENT STARTS IN 🔥
+                        </h2>
+                        {isOver ? (
+                            <div className="glass-strong neon-border-pink p-10 rounded-2xl">
+                                <h3 className="font-orbitron text-3xl sm:text-4xl font-black neon-text-pink mb-4">🎉 THE EVENT HAS CONCLUDED! 🎉</h3>
+                                <p className="text-gray-300 text-lg">Thank you to everyone who attended!</p>
+                            </div>
+                        ) : (
+                            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
+                                {boxes.map((b, i) => (
+                                    <div key={i} className="glass neon-border p-6 sm:p-8 rounded-2xl pulse-glow">
+                                        <div className="font-orbitron text-4xl sm:text-5xl md:text-6xl font-black text-white mb-2" style={{textShadow:'0 0 10px #a855f7'}}>
+                                            {String(b.value).padStart(2, '0')}
+                                        </div>
+                                        <div className="text-xs sm:text-sm uppercase tracking-widest text-purple-300 font-semibold">{b.label}</div>
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+                </section>
+            );
+        }
+
+        /* ─────────────── CONTACT HOSTS ─────────────── */
+        function ContactSection() {
+            const hosts = [
+                { name: 'Host 1', phone: '+91 7668940413', wa: '917668940413' },
+                { name: 'Host 2', phone: '+91 9084955998', wa: '919084955998' },
+            ];
+            return (
+                <section id="contact" className="py-20 px-4 relative z-10">
+                    <div className="max-w-4xl mx-auto">
+                        <h2 className="font-orbitron text-3xl sm:text-4xl font-bold text-center mb-12 neon-text-purple">CONTACT HOSTS</h2>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            {hosts.map((h, i) => (
+                                <div key={i} className="fade-in-up glass neon-border p-8 text-center rounded-2xl transition-all duration-300 hover:scale-105">
+                                    <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center text-2xl"
+                                         style={{background:'linear-gradient(135deg, #7c3aed, #ec4899)'}}>
+                                        📞
+                                    </div>
+                                    <h3 className="font-orbitron text-lg font-bold text-purple-300 mb-2">{h.name}</h3>
+                                    <p className="text-xl font-semibold text-white mb-4">{h.phone}</p>
+                                    <a href={`https://wa.me/${h.wa}?text=Hello%20Host%2C%20I%20want%20information%20regarding%20STRANGER%20EVENT.`}
+                                       target="_blank" rel="noopener noreferrer"
+                                       className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-white transition-all duration-300 hover:scale-105"
+                                       style={{background:'linear-gradient(135deg, #25D366, #128C7E)', boxShadow:'0 0 15px rgba(37,211,102,0.3)'}}>
+                                        💬 WhatsApp
+                                    </a>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            );
+        }
+
+        /* ─────────────── TICKET SELECTION ─────────────── */
+        function TicketSection({ selectedTicket, setSelectedTicket }) {
+            const tickets = [
+                { id: 'advance', name: 'Advance Booking', price: 999, badge: 'Best Value', badgeColor: '#22c55e', highlight: true },
+                { id: 'door', name: 'Door Entry', price: 1200 },
+                { id: 'couple', name: 'Couple Ticket', price: 1598, originalPrice: 1998, badge: '20% OFF', badgeColor: '#ec4899' },
+                { id: 'girls', name: 'Girls Ticket', price: 799, originalPrice: 999, badge: '20% OFF', badgeColor: '#ec4899' },
+            ];
+
+            return (
+                <section id="booking" className="py-20 px-4 relative z-10">
+                    <div className="max-w-5xl mx-auto">
+                        <h2 className="font-orbitron text-3xl sm:text-4xl font-bold text-center mb-12 neon-text-purple">🎟 Choose Your Ticket</h2>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            {tickets.map(t => (
+                                <div key={t.id}
+                                     onClick={() => setSelectedTicket(t.id)}
+                                     className={`fade-in-up glass p-8 rounded-2xl cursor-pointer transition-all duration-300 hover:scale-[1.03] relative overflow-hidden
+                                        ${selectedTicket === t.id ? 'ring-2 ring-purple-500 scale-[1.03]' : ''}
+                                        ${t.highlight ? 'neon-border' : 'border border-white/10'}
+                                     `}
+                                     style={selectedTicket === t.id ? {boxShadow:'0 0 25px rgba(168,85,247,0.4), 0 0 50px rgba(168,85,247,0.15)'} : {}}>
+                                    {t.badge && (
+                                        <div className="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-bold text-white" style={{background: t.badgeColor, boxShadow:`0 0 10px ${t.badgeColor}50`}}>
+                                            {t.badge}
+                                        </div>
+                                    )}
+                                    <h3 className="font-orbitron text-lg font-bold text-white mb-4">{t.name}</h3>
+                                    <div className="flex items-baseline gap-2">
+                                        <span className="font-orbitron text-3xl sm:text-4xl font-black" style={{color: t.highlight ? '#a855f7' : '#fff', textShadow: t.highlight ? '0 0 10px #a855f7' : 'none'}}>
+                                            ₹{t.price}
+                                        </span>
+                                        {t.originalPrice && (
+                                            <span className="text-gray-500 line-through text-lg">₹{t.originalPrice}</span>
+                                        )}
+                                    </div>
+                                    <p className="text-gray-400 text-sm mt-3">per person</p>
+                                    {selectedTicket === t.id && (
+                                        <div className="absolute bottom-4 right-4 w-6 h-6 rounded-full flex items-center justify-center" style={{background:'#a855f7'}}>
+                                            <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                                            </svg>
+                                        </div>
+                                    )}
+                                </div>
+                            ))}
+                        </div>
+                        <div className="mt-10 text-center">
+                            <p className="font-orbitron text-xl sm:text-2xl font-bold" style={{animation:'ticker-glow 2s ease-in-out infinite'}}>
+                                🔥 LIMITED TICKETS AVAILABLE 🔥
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            );
+        }
+
+        /* ─────────────── PAYMENT SECTION ─────────────── */
+        function PaymentSection({ setToast }) {
+            const qrRef = useRef(null);
+            const qrCreated = useRef(false);
+
+            useEffect(() => {
+                if (qrRef.current && !qrCreated.current && typeof QRCode !== 'undefined') {
+                    qrCreated.current = true;
+                    new QRCode(qrRef.current, {
+                        text: 'upi://pay?pa=dnegi2807@okhdfcbank&pn=Divyanshu%20Negi&cu=INR',
+                        width: 180, height: 180,
+                        colorDark: '#a855f7', colorLight: '#0a0a0a',
+                        correctLevel: QRCode.CorrectLevel.H,
+                    });
+                }
+            }, []);
+
+            const copyUPI = () => {
+                navigator.clipboard.writeText('dnegi2807@okhdfcbank');
+                setToast('✅ UPI ID copied to clipboard!');
+            };
+
+            return (
+                <section id="payment" className="py-20 px-4 relative z-10">
+                    <div className="max-w-2xl mx-auto">
+                        <h2 className="font-orbitron text-3xl sm:text-4xl font-bold text-center mb-12 neon-text-purple">
+                            🔒 Secure Payment
+                        </h2>
+                        <div className="fade-in-up glass-strong neon-border p-8 sm:p-10 rounded-2xl text-center">
+                            <div className="w-14 h-14 mx-auto mb-6 rounded-full flex items-center justify-center text-2xl" style={{background:'linear-gradient(135deg, #7c3aed, #a855f7)'}}>
+                                🛡️
+                            </div>
+                            <div className="mb-6">
+                                <p className="text-gray-400 text-sm uppercase tracking-widest mb-1">Pay To</p>
+                                <p className="text-xl font-bold text-white">Divyanshu Negi</p>
+                            </div>
+                            <div className="mb-6">
+                                <p className="text-gray-400 text-sm uppercase tracking-widest mb-1">UPI ID</p>
+                                <p className="text-lg font-mono font-semibold text-purple-300">dnegi2807@okhdfcbank</p>
+                            </div>
+                            <div className="flex justify-center mb-8">
+                                <div className="p-4 rounded-2xl" style={{background:'rgba(168,85,247,0.1)', border:'1px solid rgba(168,85,247,0.3)'}}>
+                                    <div id="payment-qr" ref={qrRef}></div>
+                                </div>
+                            </div>
+                            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                                <a href="upi://pay?pa=dnegi2807@okhdfcbank&pn=Divyanshu%20Negi&cu=INR"
+                                   className="px-6 py-3 rounded-full font-bold text-white transition-all duration-300 hover:scale-105"
+                                   style={{background:'linear-gradient(135deg, #7c3aed, #a855f7)', boxShadow:'0 0 15px rgba(168,85,247,0.3)'}}>
+                                    💳 Pay Now
+                                </a>
+                                <button onClick={copyUPI}
+                                   className="px-6 py-3 rounded-full font-bold text-white transition-all duration-300 hover:scale-105 glass neon-border">
+                                    📋 Copy UPI ID
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            );
+        }
+
+        /* ─────────────── BOOKING FORM ─────────────── */
+        function BookingForm({ selectedTicket, setSelectedTicket, onBookingComplete, setToast }) {
+            const [name, setName] = useState('');
+            const [phone, setPhone] = useState('');
+            const [screenshot, setScreenshot] = useState(null);
+            const [fileName, setFileName] = useState('');
+
+            const ticketPrices = { advance: 999, door: 1200, couple: 1598, girls: 799 };
+            const ticketNames = { advance: 'Advance Booking', door: 'Door Entry', couple: 'Couple Ticket', girls: 'Girls Ticket' };
+
+            const handleFileChange = (e) => {
+                if (e.target.files[0]) {
+                    setScreenshot(e.target.files[0]);
+                    setFileName(e.target.files[0].name);
+                }
+            };
+
+            const handleVerify = () => {
+                if (!name.trim()) { setToast('⚠️ Please enter your full name'); return; }
+                if (!phone.trim() || phone.length < 10) { setToast('⚠️ Please enter a valid mobile number'); return; }
+                if (!selectedTicket) { setToast('⚠️ Please select a ticket type'); return; }
+
+                const ticketName = ticketNames[selectedTicket];
+                const amount = ticketPrices[selectedTicket];
+                const msg = `Hello Host,%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0ATicket Type: ${encodeURIComponent(ticketName)}%0AAmount Paid: ₹${amount}%0A%0AI have completed payment for STRANGER EVENT.%0APlease verify my booking.`;
+                window.open(`https://wa.me/917668940413?text=${msg}`, '_blank');
+
+                onBookingComplete({ name, phone, ticketType: ticketName, amount });
+            };
+
+            return (
+                <section id="booking-form" className="py-20 px-4 relative z-10">
+                    <div className="max-w-xl mx-auto">
+                        <h2 className="font-orbitron text-3xl sm:text-4xl font-bold text-center mb-12 neon-text-purple">📋 Booking Form</h2>
+                        <div className="fade-in-up glass-strong neon-border p-8 sm:p-10 rounded-2xl">
+                            <div className="space-y-5">
+                                <div>
+                                    <label className="block text-sm text-gray-400 mb-2 font-medium">Full Name</label>
+                                    <input type="text" className="form-input" placeholder="Enter your full name"
+                                           value={name} onChange={e => setName(e.target.value)} />
+                                </div>
+                                <div>
+                                    <label className="block text-sm text-gray-400 mb-2 font-medium">Mobile Number</label>
+                                    <input type="tel" className="form-input" placeholder="Enter your mobile number"
+                                           value={phone} onChange={e => setPhone(e.target.value)} />
+                                </div>
+                                <div>
+                                    <label className="block text-sm text-gray-400 mb-2 font-medium">Ticket Type</label>
+                                    <select className="form-input" value={selectedTicket || ''} onChange={e => setSelectedTicket(e.target.value)}>
+                                        <option value="" disabled>Select ticket type</option>
+                                        <option value="advance">Advance Booking – ₹999</option>
+                                        <option value="door">Door Entry – ₹1200</option>
+                                        <option value="couple">Couple Ticket – ₹1598</option>
+                                        <option value="girls">Girls Ticket – ₹799</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label className="block text-sm text-gray-400 mb-2 font-medium">Payment Screenshot</label>
+                                    <div className="file-input-wrapper">
+                                        <input type="file" accept="image/*" onChange={handleFileChange} />
+                                        <div className="text-purple-400 text-3xl mb-2">📤</div>
+                                        <p className="text-gray-400 text-sm">{fileName || 'Click to upload payment screenshot'}</p>
+                                    </div>
+                                </div>
+                                <button onClick={handleVerify}
+                                    className="w-full py-4 rounded-2xl font-bold text-white text-lg transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+                                    style={{background:'linear-gradient(135deg, #7c3aed, #ec4899)', boxShadow:'0 0 25px rgba(168,85,247,0.4)'}}>
+                                    ✅ Verify Payment
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            );
+        }
+
+        /* ─────────────── VIP TICKET ─────────────── */
+        function VIPTicket({ booking }) {
+            const ticketQRRef = useRef(null);
+            const ticketQRCreated = useRef(false);
+            const ticketId = useRef('SE-' + String(Math.floor(10000 + Math.random() * 90000)));
+
+            useEffect(() => {
+                if (ticketQRRef.current && !ticketQRCreated.current && typeof QRCode !== 'undefined') {
+                    ticketQRCreated.current = true;
+                    new QRCode(ticketQRRef.current, {
+                        text: `STRANGER-EVENT|${ticketId.current}|${booking.name}|VERIFIED`,
+                        width: 130, height: 130,
+                        colorDark: '#a855f7', colorLight: '#0a0a0a',
+                        correctLevel: QRCode.CorrectLevel.H,
+                    });
+                }
+            }, [booking.name]);
+
+            const downloadPDF = async () => {
+                const el = document.getElementById('vip-ticket');
+                if (!el) return;
+                const canvas = await html2canvas(el, { backgroundColor: '#0a0a0a', scale: 2, useCORS: true });
+                const imgData = canvas.toDataURL('image/png');
+                const { jsPDF } = window.jspdf;
+                const pdf = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a5' });
+                const pW = pdf.internal.pageSize.getWidth();
+                const pH = pdf.internal.pageSize.getHeight();
+                const ratio = canvas.width / canvas.height;
+                let imgW = pW - 20;
+                let imgH = imgW / ratio;
+                if (imgH > pH - 20) { imgH = pH - 20; imgW = imgH * ratio; }
+                const x = (pW - imgW) / 2;
+                const y = (pH - imgH) / 2;
+                pdf.setFillColor(10, 10, 10);
+                pdf.rect(0, 0, pW, pH, 'F');
+                pdf.addImage(imgData, 'PNG', x, y, imgW, imgH);
+                pdf.save(`${ticketId.current}-VIP-Ticket.pdf`);
+            };
+
+            const downloadImage = async () => {
+                const el = document.getElementById('vip-ticket');
+                if (!el) return;
+                const canvas = await html2canvas(el, { backgroundColor: '#0a0a0a', scale: 2, useCORS: true });
+                const link = document.createElement('a');
+                link.download = `${ticketId.current}-VIP-Ticket.png`;
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+            };
+
+            return (
+                <section id="ticket-section" className="py-20 px-4 relative z-10">
+                    <div className="max-w-lg mx-auto">
+                        <h2 className="font-orbitron text-3xl sm:text-4xl font-bold text-center mb-12 neon-text-purple">🎫 Your VIP Ticket</h2>
+
+                        <div id="vip-ticket" className="vip-ticket holographic-shine p-8 sm:p-10 mx-auto" style={{maxWidth:'420px'}}>
+                            <div className="text-center mb-1">
+                                <div className="inline-block px-4 py-1 rounded-full text-[10px] font-bold tracking-[0.3em] mb-4"
+                                     style={{background:'linear-gradient(135deg, #7c3aed, #ec4899)', color:'#fff'}}>
+                                    VIP ACCESS
+                                </div>
+                            </div>
+                            <h3 className="font-orbitron text-2xl sm:text-3xl font-black text-center mb-1 neon-text-purple">STRANGER</h3>
+                            <h4 className="font-orbitron text-lg sm:text-xl font-bold text-center mb-6 neon-text-pink">EVENT</h4>
+
+                            <div className="border-t border-dashed border-purple-500/30 my-4"></div>
+
+                            <div className="grid grid-cols-2 gap-4 text-sm mb-4">
+                                <div>
+                                    <p className="text-gray-500 text-xs uppercase tracking-widest">Ticket ID</p>
+                                    <p className="font-mono font-bold text-purple-300">{ticketId.current}</p>
+                                </div>
+                                <div>
+                                    <p className="text-gray-500 text-xs uppercase tracking-widest">Guest</p>
+                                    <p className="font-bold text-white">{booking.name}</p>
+                                </div>
+                                <div>
+                                    <p className="text-gray-500 text-xs uppercase tracking-widest">Date</p>
+                                    <p className="font-bold text-white">6 May 2026</p>
+                                </div>
+                                <div>
+                                    <p className="text-gray-500 text-xs uppercase tracking-widest">Entry Time</p>
+                                    <p className="font-bold text-white">6:30 PM</p>
+                                </div>
+                                <div>
+                                    <p className="text-gray-500 text-xs uppercase tracking-widest">Location</p>
+                                    <p className="font-bold text-white">Haldwani</p>
+                                </div>
+                                <div>
+                                    <p className="text-gray-500 text-xs uppercase tracking-widest">Type</p>
+                                    <p className="font-bold text-white">{booking.ticketType}</p>
+                                </div>
+                            </div>
+
+                            <div className="border-t border-dashed border-purple-500/30 my-4"></div>
+
+                            <div className="flex items-center justify-between">
+                                <div>
+                                    <div className="flex items-center gap-2 mb-1">
+                                        <span className="text-green-400 font-bold text-lg neon-text-green">VERIFIED ✅</span>
+                                    </div>
+                                    <p className="text-gray-500 text-xs">Amount: ₹{booking.amount}</p>
+                                </div>
+                                <div className="p-2 rounded-lg" style={{background:'rgba(10,10,10,0.8)', border:'1px solid rgba(168,85,247,0.3)'}}>
+                                    <div id="ticket-qr" ref={ticketQRRef}></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+                            <button onClick={downloadPDF}
+                                className="px-8 py-3 rounded-full font-bold text-white transition-all duration-300 hover:scale-105"
+                                style={{background:'linear-gradient(135deg, #7c3aed, #a855f7)', boxShadow:'0 0 15px rgba(168,85,247,0.3)'}}>
+                                📄 Download PDF
+                            </button>
+                            <button onClick={downloadImage}
+                                className="px-8 py-3 rounded-full font-bold text-white transition-all duration-300 hover:scale-105 glass neon-border-pink">
+                                🖼️ Save As Image
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            );
+        }
+
+        /* ─────────────── SUCCESS MODAL ─────────────── */
+        function SuccessModal({ onClose }) {
+            const confettiColors = ['#a855f7','#ec4899','#c084fc','#f472b6','#22c55e','#f59e0b','#3b82f6','#ef4444'];
+            const confetti = Array.from({ length: 60 }, (_, i) => ({
+                id: i,
+                left: Math.random() * 100,
+                size: Math.random() * 8 + 4,
+                color: confettiColors[Math.floor(Math.random() * confettiColors.length)],
+                duration: Math.random() * 3 + 2,
+                delay: Math.random() * 2,
+                shape: Math.random() > 0.5 ? '50%' : '2px',
+            }));
+
+            return (
+                <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4" style={{background:'rgba(0,0,0,0.8)', backdropFilter:'blur(10px)'}}>
+                    {confetti.map(c => (
+                        <div key={c.id} className="confetti-piece" style={{
+                            left: `${c.left}%`, top: '-10px',
+                            width: `${c.size}px`, height: `${c.size * 1.5}px`,
+                            background: c.color, borderRadius: c.shape,
+                            animationDuration: `${c.duration}s`, animationDelay: `${c.delay}s`,
+                        }} />
+                    ))}
+                    <div className="glass-strong p-10 rounded-3xl text-center max-w-md w-full relative" style={{border:'1px solid rgba(168,85,247,0.3)', boxShadow:'0 0 40px rgba(168,85,247,0.2)'}}>
+                        <div className="text-6xl mb-6">🎉</div>
+                        <h3 className="font-orbitron text-2xl sm:text-3xl font-black mb-4 neon-text-purple">Booking Confirmed!</h3>
+                        <p className="text-gray-300 text-lg mb-3">Your ticket has been successfully verified.</p>
+                        <p className="text-gray-400 text-sm mb-8">Please bring a valid Government ID and show your QR ticket at entry.</p>
+                        <button onClick={onClose}
+                            className="px-8 py-3 rounded-full font-bold text-white transition-all duration-300 hover:scale-105"
+                            style={{background:'linear-gradient(135deg, #7c3aed, #a855f7)', boxShadow:'0 0 15px rgba(168,85,247,0.3)'}}>
+                            View My Ticket
+                        </button>
+                    </div>
+                </div>
+            );
+        }
+
+        /* ─────────────── FOOTER ─────────────── */
+        function Footer() {
+            return (
+                <footer className="relative z-10 pt-10 pb-24 px-4">
+                    <div className="max-w-4xl mx-auto">
+                        <div className="h-px mb-10" style={{background:'linear-gradient(90deg, transparent, #a855f7, #ec4899, #a855f7, transparent)'}}></div>
+                        <div className="text-center">
+                            <h3 className="font-orbitron text-xl font-bold mb-4 neon-text-purple">STRANGER EVENT</h3>
+                            <p className="text-gray-400 text-sm mb-6">© 2026 STRANGER EVENT. All Rights Reserved.</p>
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+                                <a href="https://wa.me/917668940413" target="_blank" rel="noopener noreferrer"
+                                   className="text-gray-400 hover:text-green-400 transition-colors text-sm">
+                                    📱 +91 7668940413
+                                </a>
+                                <a href="https://wa.me/919084955998" target="_blank" rel="noopener noreferrer"
+                                   className="text-gray-400 hover:text-green-400 transition-colors text-sm">
+                                    📱 +91 9084955998
+                                </a>
+                            </div>
+                            <div className="inline-block px-5 py-2 rounded-full glass text-xs text-gray-400 tracking-widest uppercase font-semibold" style={{border:'1px solid rgba(236,72,153,0.3)'}}>
+                                ⚠️ Strictly 18+ Event • Valid Government ID Required
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            );
+        }
+
+        /* ─────────────── MAIN APP ─────────────── */
+        function App() {
+            const [selectedTicket, setSelectedTicket] = useState(null);
+            const [booking, setBooking] = useState(null);
+            const [showModal, setShowModal] = useState(false);
+            const [toast, setToast] = useState(null);
+
+            const handleBookingComplete = (data) => {
+                setBooking(data);
+                setShowModal(true);
+            };
+
+            /* Intersection Observer for fade-in-up */
+            useEffect(() => {
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('visible');
+                            }
+                        });
+                    },
+                    { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+                );
+                const elements = document.querySelectorAll('.fade-in-up');
+                elements.forEach(el => observer.observe(el));
+                return () => observer.disconnect();
+            });
+
+            return (
+                <div className="relative min-h-screen">
+                    <Particles />
+                    <FloatingWhatsApp />
+                    {toast && <Toast message={toast} onClose={() => setToast(null)} />}
+                    {showModal && <SuccessModal onClose={() => setShowModal(false)} />}
+
+                    <HeroSection />
+                    <EventDetails />
+                    <Countdown />
+                    <ContactSection />
+                    <TicketSection selectedTicket={selectedTicket} setSelectedTicket={setSelectedTicket} />
+                    <PaymentSection setToast={setToast} />
+                    <BookingForm
+                        selectedTicket={selectedTicket}
+                        setSelectedTicket={setSelectedTicket}
+                        onBookingComplete={handleBookingComplete}
+                        setToast={setToast}
+                    />
+                    {booking && <VIPTicket booking={booking} />}
+                    <Footer />
+                </div>
+            );
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>
